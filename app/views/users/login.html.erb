@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<%= form_tag(login_path, method: "post") do%>
+    <div class="field">
+      <%= label_tag(:email, 'Ingrese su correo') %>
+      <%= text_field_tag(:email)%>
+    </div>
+    <div class="field">
+      <%= label_tag(:image, 'Ingrese la imagen aautentificar') %>
+      <%= text_area_tag(:image)%>
+      <input type="file" id="subir_imagen">
+    </div>
+    <%= submit_tag("Enviar") %>
+  <div></br>
+      <img class="imagen_previa"/>
+  </div>
+<% end %>
