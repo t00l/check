@@ -8,7 +8,7 @@ class RestController < ApplicationController
   private
 
   def response_request(image, email)
-    url =  "https://loginacid.herokuapp.com/rest/verify_user"
+    url =  "https://frozen-headland-19727.herokuapp.com/rest/verify_user"
     uri = URI(url)
     res = Net::HTTP.post_form(uri, email: params[:email], image: params[:image])
     if res.code == "200" && res.message == "OK"
