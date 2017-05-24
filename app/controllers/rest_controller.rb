@@ -1,4 +1,5 @@
 class RestController < ApplicationController
+  
   def login
     if form_params[:email] && form_params[:image]
       response_request(params[:email],params[:image])
